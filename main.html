@@ -8,8 +8,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:radial-gradient(circle at top,#020202,#000);color:#fff;overflow-x:hidden;}
-
-/* Header */
 header{
  position:fixed;top:0;left:0;width:100%;
  display:flex;justify-content:space-between;align-items:center;
@@ -32,54 +30,26 @@ nav a:hover{color:#00ffaa;text-shadow:0 0 10px #00ffaa;}
  nav a{margin:0.8rem 0;}
  .menu-toggle{display:block;}
 }
-
-/* Welcome note */
-.welcome{
- text-align:center;
- margin-top:80px;
- font-size:1.2rem;
- color:#00ffaa;
- text-shadow:0 0 15px rgba(0,255,255,0.4);
- animation:fadeIn 1.5s ease-in-out;
-}
-.welcome span{
- background:linear-gradient(90deg,#00ffaa,#00e0ff);
- -webkit-background-clip:text;-webkit-text-fill-color:transparent;
- font-weight:700;
-}
+.welcome{text-align:center;margin-top:80px;font-size:1.2rem;color:#00ffaa;text-shadow:0 0 15px rgba(0,255,255,0.4);animation:fadeIn 1.5s ease-in-out;}
+.welcome span{background:linear-gradient(90deg,#00ffaa,#00e0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
-
-/* Page */
 main{padding-top:40px;padding-bottom:60px;padding-left:6%;padding-right:6%;}
-
-/* Custom Dropdown + Search bar */
-.search-filter{
- display:flex;justify-content:center;align-items:center;flex-wrap:wrap;
- gap:1rem;margin-bottom:2rem;position:relative;
-}
+.search-filter{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;position:relative;}
 .dropdown{position:relative;min-width:180px;}
 .dropdown-toggle{
  background:#111;color:#00ffaa;border:1px solid rgba(255,255,255,0.15);
- border-radius:8px;padding:0.7rem 1rem;
- cursor:pointer;font-weight:600;
- display:flex;align-items:center;justify-content:space-between;
- transition:.25s;
+ border-radius:8px;padding:0.7rem 1rem;cursor:pointer;font-weight:600;
+ display:flex;align-items:center;justify-content:space-between;transition:.25s;
 }
 .dropdown-toggle:hover{box-shadow:0 0 12px rgba(0,255,255,.3);}
 .dropdown-menu{
  position:absolute;top:110%;left:0;width:100%;
  background:rgba(15,15,15,0.95);border:1px solid rgba(255,255,255,0.1);
- border-radius:10px;overflow:hidden;
- box-shadow:0 0 15px rgba(0,255,255,0.1);
- transform-origin:top;
- transform:scaleY(0);opacity:0;
- transition:all .25s ease;
- z-index:50;
+ border-radius:10px;overflow:hidden;box-shadow:0 0 15px rgba(0,255,255,0.1);
+ transform-origin:top;transform:scaleY(0);opacity:0;transition:all .25s ease;z-index:50;
 }
 .dropdown.active .dropdown-menu{transform:scaleY(1);opacity:1;}
-.dropdown-menu div{
- padding:0.8rem 1rem;cursor:pointer;color:#bbb;transition:.2s;
-}
+.dropdown-menu div{padding:0.8rem 1rem;cursor:pointer;color:#bbb;transition:.2s;}
 .dropdown-menu div:hover{background:linear-gradient(90deg,#00ffaa20,#00e0ff20);color:#00ffaa;}
 .search-filter input{
  background:#111;color:#fff;border:1px solid rgba(255,255,255,0.1);
@@ -87,42 +57,26 @@ main{padding-top:40px;padding-bottom:60px;padding-left:6%;padding-right:6%;}
 }
 .search-filter button{
  background:linear-gradient(90deg,#00ffaa,#00e0ff);
- color:#000;font-weight:600;padding:0.7rem 1.4rem;
- border:none;border-radius:8px;cursor:pointer;transition:.25s;
+ color:#000;font-weight:600;padding:0.7rem 1.4rem;border:none;border-radius:8px;cursor:pointer;transition:.25s;
 }
 .search-filter button:hover{transform:translateY(-2px);box-shadow:0 0 15px rgba(0,255,255,.4);}
-
-/* Book grid */
-.book-grid{
- display:grid;
- grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
- gap:1.5rem;
-}
+.book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;}
 .book-card{
- background:rgba(25,25,25,.9);
- border:1px solid rgba(255,255,255,.05);
- border-radius:14px;
- padding:1rem;
- display:flex;flex-direction:column;align-items:center;text-align:center;
- transition:.3s;
+ background:rgba(25,25,25,.9);border:1px solid rgba(255,255,255,.05);border-radius:14px;
+ padding:1rem;display:flex;flex-direction:column;align-items:center;text-align:center;transition:.3s;
 }
 .book-card:hover{transform:translateY(-5px);box-shadow:0 0 25px rgba(0,255,255,.2);}
 .book-card img{width:100%;height:300px;object-fit:cover;border-radius:10px;margin-bottom:1rem;}
 .book-card h3{font-size:1.1rem;margin-bottom:0.3rem;}
 .book-card p{color:#aaa;font-size:0.9rem;margin-bottom:1rem;}
 .book-card a{
- display:inline-block;
- background:linear-gradient(90deg,#00ffaa,#00e0ff);
- color:#000;padding:0.6rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:600;
- transition:.25s;
+ display:inline-block;background:linear-gradient(90deg,#00ffaa,#00e0ff);
+ color:#000;padding:0.6rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:600;transition:.25s;
 }
 .book-card a:hover{transform:translateY(-2px);box-shadow:0 0 15px rgba(0,255,255,.4);}
-
-/* Footer */
 footer{
  background:rgba(15,15,15,.85);backdrop-filter:blur(10px);
- text-align:center;padding:2.5rem 1rem;border-top:1px solid rgba(255,255,255,.05);
- margin-top:60px;
+ text-align:center;padding:2.5rem 1rem;border-top:1px solid rgba(255,255,255,.05);margin-top:60px;
 }
 footer a{color:#00e0ff;text-decoration:none;margin:0 1rem;}
 footer a:hover{color:#00ffaa;}
@@ -188,12 +142,11 @@ menu.addEventListener('click',()=>nav.classList.toggle('active'));
 
 let allBooks=[];let activeFilter='all';
 
-/* ---- Custom Dropdown ---- */
+/* ---- Dropdown ---- */
 const dropdown=document.getElementById('categoryDropdown');
 const toggle=dropdown.querySelector('.dropdown-toggle');
 const menuBox=dropdown.querySelector('.dropdown-menu');
 const options=menuBox.querySelectorAll('div');
-
 toggle.addEventListener('click',()=>dropdown.classList.toggle('active'));
 options.forEach(opt=>{
   opt.addEventListener('click',()=>{
@@ -206,22 +159,22 @@ options.forEach(opt=>{
 });
 document.addEventListener('click',e=>{if(!dropdown.contains(e.target))dropdown.classList.remove('active');});
 
-/* ---- API Base ---- */
-const API_BASE = "https://new-m97f.onrender.com";
+/* ---- API ---- */
+const API_BASE="https://new-m97f.onrender.com";
 
-/* ---- Fetch books ---- */
+/* ---- Load Books ---- */
 async function loadBooks(query=''){
   try{
-    const res = await fetch(`${API_BASE}/api/books`);
-    const books = await res.json();
-    allBooks = books;
+    const res=await fetch(`${API_BASE}/api/books`);
+    const books=await res.json();
+    allBooks=books;
     filterAndDisplay(query);
   }catch(e){
     document.getElementById('books').innerHTML='<p style="text-align:center;color:#f66;">Error loading books.</p>';
   }
 }
 
-/* ---- Filter + Search ---- */
+/* ---- Filter ---- */
 function filterAndDisplay(query=''){
   let filtered=allBooks;
   if(query) filtered=filtered.filter(b=>b.title.toLowerCase().includes(query.toLowerCase()));
@@ -229,7 +182,7 @@ function filterAndDisplay(query=''){
   displayBooks(filtered);
 }
 
-/* ---- Display Books ---- */
+/* ---- Display ---- */
 function displayBooks(list){
   const grid=document.getElementById('books');
   grid.innerHTML='';
@@ -242,12 +195,12 @@ function displayBooks(list){
       <img src="${thumb}" alt="${b.title}">
       <h3>${b.title}</h3>
       <p>${b.author || ''}</p>
-      <a href="${b.file_url}" download><i class="fas fa-download"></i> Download</a>`;
+      <a href="book-details.html?id=${b.id}"><i class="fas fa-book-open"></i> View Details</a>`;
     grid.appendChild(card);
   });
 }
 
-/* ---- Search events ---- */
+/* ---- Search ---- */
 document.getElementById('searchBtn').addEventListener('click',()=>{
   const q=document.getElementById('search').value.trim();filterAndDisplay(q);
 });
